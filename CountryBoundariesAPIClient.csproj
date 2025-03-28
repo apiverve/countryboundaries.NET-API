@@ -4,7 +4,7 @@
     <TargetFrameworks>net20;net35;net40;net45;netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>APIVerve.API.CountryBoundaries</Title>
-    <Version>1.1.8</Version>
+    <Version>1.1.9</Version>
     <Authors>APIVerve</Authors>
     <Company>APIVerve</Company>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -14,7 +14,7 @@
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
     <PackageProjectUrl>https://apiverve.com/?utm_source=nuget</PackageProjectUrl>
     <SignAssembly>False</SignAssembly>
-    <Description>Country Shapes is a simple tool for getting the shape of a specific country's border. It returns the shape of the specified country's border.</Description>
+    <Description>Country Boundaries is a simple tool for getting the shape of a specific country's border. It returns the shape of the specified country's border.</Description>
     <RepositoryUrl>https://github.com/apiverve/countryboundaries.NET-API</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>country shapes; country shapes api; country shapes tool; country shapes software; country shapes service</PackageTags>
