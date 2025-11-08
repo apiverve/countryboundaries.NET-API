@@ -4,63 +4,70 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class geometry
-{
-    [JsonProperty("coordinates")]
-    public double[][][][] coordinates { get; set; }
+    /// <summary>
+    /// Geometry data
+    /// </summary>
+    public class Geometry
+    {
+        [JsonProperty("coordinates")]
+        public double[][][][] Coordinates { get; set; }
 
-    [JsonProperty("type")]
-    public string type { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Properties data
+    /// </summary>
+    public class Properties
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-public class properties
-{
-    [JsonProperty("name")]
-    public string name { get; set; }
+    }
+    /// <summary>
+    /// Features data
+    /// </summary>
+    public class Features
+    {
+        [JsonProperty("geometry")]
+        public Geometry Geometry { get; set; }
 
-}
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-public class features
-{
-    [JsonProperty("geometry")]
-    public geometry geometry { get; set; }
+        [JsonProperty("properties")]
+        public Properties Properties { get; set; }
 
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
 
-    [JsonProperty("properties")]
-    public properties properties { get; set; }
+    }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("features")]
+        public Features[] Features { get; set; }
 
-    [JsonProperty("type")]
-    public string type { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
 
-}
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-public class data
-{
-    [JsonProperty("features")]
-    public features[] features { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("type")]
-    public string type { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-}
-
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
-
-    [JsonProperty("error")]
-    public object error { get; set; }
-
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
